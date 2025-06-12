@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liga Kosmetologov</title>
+  <style>
+    /* Базовые стили, вдохновлённые Apple.com */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      background-color: #fafafa;
+      color: #1d1d1f;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Ссылки по умолчанию чёрные, кроме кнопок */
+    a {
+      color: #1d1d1f;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover { color: #005bb5; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 60px; background: #fff; border-bottom: 1px solid #e3e3e3;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo {
+      font-size: 24px; font-weight: 700;
+      padding: 8px 16px; border: 1px solid rgba(29,29,31,0.2); border-radius: 8px;
+    }
+    .logo small { font-size: 12px; color: #888; display: block; margin-top: -4px; }
+    nav a { margin-left: 40px; font-size: 16px; font-weight: 500; }
+
+    .hero { text-align: center; padding: 100px 20px; background: #fff; }
+    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.02em; }
+    .hero p { font-size: 18px; color: #6e6e73; margin-bottom: 40px; }
+    .btn-primary {
+      background-color: #0071e3; color: #fff; padding: 15px 40px; font-size: 18px;
+      border-radius: 12px; border: none; cursor: pointer; transition: background-color 0.2s ease;
+      font-weight: 600;
+    }
+    .btn-primary:hover { background-color: #005bb5; }
+
+    .section { padding: 80px 60px; }
+    .section:nth-of-type(even) { background: #f5f5f7; }
+    .section h2 {
+      font-size: 32px; font-weight: 600; text-align: center; margin-bottom: 40px;
+      display: inline-block; padding: 8px 16px; border: 1px solid rgba(29,29,31,0.2); border-radius: 8px;
+    }
+
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px; max-width: 1200px; margin: 0 auto;
+    }
+    .service-card {
+      background: #fff; padding: 30px; border-radius: 20px;
+      text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover { transform: translateY(-8px); }
+    .service-card h3 { font-size: 20px; margin-bottom: 10px; font-weight: 600; }
+    .service-card p { font-size: 14px; color: #6e6e73; }
+
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 20px; max-width: 1200px; margin: 0 auto;
+    }
+    .gallery-grid img { width: 100%; border-radius: 12px; object-fit: cover; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+
+    .reviews {
+      max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 20px;
+    }
+    .review {
+      padding: 30px; background: #fff; border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1); font-style: italic;
+    }
+
+    .contacts-form {
+      max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;
+    }
+    .contacts-form input, .contacts-form textarea {
+      padding: 15px; font-size: 16px; border: 1px solid #d2d2d7; border-radius: 8px;
+    }
+    .contacts-form button {
+      background-color: #0071e3; color: #fff; padding: 15px; font-size: 16px;
+      border: none; border-radius: 12px; cursor: pointer; transition: background-color 0.2s ease;
+      font-weight: 600;
+    }
+    .contacts-form button:hover { background-color: #005bb5; }
+
+    footer { text-align: center; padding: 40px 20px; color: #6e6e73; font-size: 14px; background: #f5f5f7; }
+  </style>
+</head>
+<body id="top">
+
+<header>
+  <a href="#top" class="logo">Liga Kosmetologov<small>by Sultana</small></a>
+  <nav>
+    <a href="#services">Услуги</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Профессиональный уход за вашей красотой</h1>
+  <p>Экспертные процедуры от лучших косметологов с индивидуальным подходом.</p>
+  <button class="btn-primary">Записаться</button>
+</section>
+
+<section id="services" class="section">
+  <h2>Наши услуги</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Уход за лицом</h3>
+      <p>Комплексные процедуры для сияющей и здоровой кожи.</p>
+    </div>
+    <div class="service-card">
+      <h3>Мезотерапия</h3>
+      <p>Микроинъекции витаминов и гиалуроновой кислоты.</p>
+    </div>
+    <div class="service-card">
+      <h3>Чистка лица</h3>
+      <p>Глубокая очищающая процедура с восстановлением.</p>
+    </div>
+    <div class="service-card">
+      <h3>Увлажнение и питание</h3>
+      <p>Интенсивные маски для восстановления баланса влаги.</p>
+    </div>
+    <div class="service-card">
+      <h3>Пилинги</h3>
+      <p>Отшелушивающие процедуры для обновления кожи.</p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <h2>Отзывы клиентов</h2>
+  <div class="reviews">
+    <div class="review">«Лучшая процедура, которую я когда-либо пробовал!» — Марина</div>
+    <div class="review">«Нежный и профессиональный подход. Рекомендую всем!» — Анна</div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <h2>Галерея работ</h2>
+  <div class="gallery-grid">
+    <img src="https://via.placeholder.com/400x300" alt="Результат 1">
+    <img src="https://via.placeholder.com/400x300" alt="Результат 2">
+    <img src="https://via.placeholder.com/400x300" alt="Результат 3">
+    <img src="https://via.placeholder.com/400x300" alt="Результат 4">
+  </div>
+</section>
+
+<section id="contacts" class="section">
+  <h2>Свяжитесь с нами</h2>
+  <form class="contacts-form">
+    <input type="text" placeholder="Ваше имя" required>
+    <input type="tel" placeholder="Ваш телефон" required>
+    <textarea rows="4" placeholder="Ваше сообщение"></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+</section>
+
+<footer>
+  Liga Kosметologov © 2025 by Sultana
+</footer>
+
+</body>
+</html>
